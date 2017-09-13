@@ -31,10 +31,11 @@ defmodule Ex03 do
 
   This will take the collection, split it into n chunks, where n is
   the process count, and then run each chunk through a regular map
-  function, but with each map running in a separate process.
+  function, but with each map running in a separate process. It should use 
+  spawn and message passing.
 
   Useful functions include `Enum.map/3`, `Enum.chunk_every/4`, and
- `Enum.concat/1`. You might also look at Task.async and Task.await.
+ `Enum.concat/1`. 
 
   Feel free to use one or more helper functions...
 
