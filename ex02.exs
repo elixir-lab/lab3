@@ -11,7 +11,7 @@ defmodule Ex02 do
 
   @global_name :global_next_value
 
-  def new_global_counter do
+  def new_global_counter(initial_value \\ 0) do
     # « your code goes here»
   end
 

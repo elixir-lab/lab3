@@ -33,13 +33,15 @@ defmodule Ex03 do
   the process count, and then run each chunk through a regular map
   function, but with each map running in a separate process.
 
-  Useful functions include `Enum.count/1`, `Enum.chunk/4` and
- `Enum.concat/1`.
+  Useful functions include `Enum.map/3`, `Enum.chunk_every/4`, and
+ `Enum.concat/1`. You might also look at Task.async and Task.await.
+
+  Feel free to use one or more helper functions...
 
   """
 
   def pmap(collection, process_count, function) do
-    # your code goes here
+    # your code here
   end
 
 end
@@ -63,7 +65,7 @@ defmodule TestEx03 do
   end
 
   test "actually reduces time" do
-    range = 1..1_000_000
+    range = 1..100_000
     # random calculation to burn some cpu
     calc  = fn n -> :math.sin(n) + :math.sin(n/2) + :math.sin(n/4)  end
 
