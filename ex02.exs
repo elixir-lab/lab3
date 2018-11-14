@@ -13,10 +13,14 @@ defmodule Ex02 do
 
   def new_global_counter(initial_value \\ 0) do
     # « your code goes here»
+    # You can give an agent a name by adding the
+    # `name: @global_name` option to start_link
   end
 
   def global_next_value do
     # « your code goes here»
+    # and you can use that name instead of a pid
+    # in calls such as `get_and_update`
   end
 end
 
