@@ -32,31 +32,35 @@ defmodule Test do
   You'll do this three times, in three different ways.
 
   """
-  
+
 
   @doc """
-  First uncomment this test. Here you will be inserting code
+  First get this test working. Here you will be inserting code
   to create and access the agent inline, in the test itself.
 
   Replace the placeholders with your code.
   """
-  # test "counter using an agent" do
-  #   { :ok, counter } = # « your code goes here »
-  #   value   = Agent.get_and_update(counter, «your code here»)
-  #   assert value == 0
-  #   value   = Agent.get_and_update(counter, «your code here»)
-  #   assert value == 1
-  # end
+
+  test "counter using an agent" do
+    { :ok, counter } = «your code goes here»
+    value   = Agent.get_and_update(counter, «your code here»)
+    assert value == 0
+    value   = Agent.get_and_update(counter, «your code here»)
+    assert value == 1
+  end
 
   @doc """
-  Next, uncomment this test, and add code to the Ex02 module at the
+  Next, enable this test, and add code to the Ex02 module at the
   top of this file to make those tests run.
   """
-  # test "higher level API interface" do
-  #   count = Ex02.new_counter(5)
-  #   assert  Ex02.next_value(count) == 5
-  #   assert  Ex02.next_value(count) == 6
-  # end
+
+  @tag :skip
+
+  test "higher level API interface" do
+    count = Ex02.new_counter(5)
+    assert  Ex02.next_value(count) == 5
+    assert  Ex02.next_value(count) == 6
+  end
 
   @doc """
   Last (for this exercise), we'll create a global counter by adding
@@ -64,16 +68,12 @@ defmodule Test do
   count, but how can you arrange things so that you don't need to pass
   that agent into calls to `global_next_value`?
   """
-  # test "global counter" do
-  #   Ex02.new_global_counter
-  #   assert Ex02.global_next_value == 0
-  #   assert Ex02.global_next_value == 1
-  #   assert Ex02.global_next_value == 2
-  # end
+
+  @tag :skip
+  test "global counter" do
+    Ex02.new_global_counter
+    assert Ex02.global_next_value == 0
+    assert Ex02.global_next_value == 1
+    assert Ex02.global_next_value == 2
+  end
 end
-
-
-
-
-
-
